@@ -516,7 +516,7 @@
             <h2 class="text-center">Ready to Feel Like Yourself Again?</h2>
             <p class="text-center">Order your Clean 9 Ultra Vanilla kit today and start your 9-day transformation.</p>
             
-            <form id="orderForm" class="order-form">
+            <form id="orderForm" class="order-form" action="https://formspree.io/f/mpwpywvz" method="POST">
                 <h3>Complete the form below to get started:</h3>
                 
                 <div class="form-group">
@@ -604,35 +604,15 @@
                 email: document.getElementById('email').value,
                 phone: document.getElementById('phone').value,
                 address1: document.getElementById('address1').value,
-                address2: document.getElementById('address2').value,
-                city: document.getElementById('city').value,
-                state: document.getElementById('state').value,
-                zip: document.getElementById('zip').value,
-                country: document.getElementById('country').value,
-                instructions: document.getElementById('instructions').value
+                // address2: document.getElementById('address2').value,
+                // city: document.getElementById('city').value,
+                // state: document.getElementById('state').value,
+                // zip: document.getElementById('zip').value,
+                // country: document.getElementById('country').value,
+                // instructions: document.getElementById('instructions').value
             };
             
-            console.log('Order submitted:', formData);
             
-            // For GitHub Pages, you'd typically redirect to a form processing service
-            // Or use a service like Formspree
-            // Example:
-            window.location.href = "https://formspree.io/f/mpwpywvz";
-            
-            // For demo purposes, we'll just show an alert
-            alert('Thank you for your order! We will process it right away. Check your email for confirmation details.');
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
     </script>
 </body>
 </html>
