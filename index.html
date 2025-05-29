@@ -631,7 +631,7 @@
                 email: document.getElementById('email').value,
                 phone: document.getElementById('phone').value,
                 address1: document.getElementById('address1').value,
-                product: document.querySelectorAll('input[name="product"]:checked').map(input => input.value).join(','),
+                product: Array.from(document.querySelectorAll('input[name="product"]:checked')).map(input => input.value).join(','),
                 // address2: document.getElementById('address2').value,
                 // city: document.getElementById('city').value,
                 // state: document.getElementById('state').value,
