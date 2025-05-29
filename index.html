@@ -346,14 +346,44 @@
                 flex-direction: column;
             }
         }
+        @media (max-width: 600px) {
+            .container { padding: 0.5rem 0.2rem; }
+            h1 { font-size: 1.3rem; }
+            h2 { font-size: 1.1rem; }
+            .hero { padding: 1.5rem 0; }
+            .hero-content { padding: 0 0.2rem; }
+            .navbar-logo { height: 60px !important; }
+            .hero-image { max-width: 90vw; }
+            .product-features, .problem-list, .benefits-list, .support-list { margin-left: 0.5rem; }
+            .order-form { padding: 1rem; }
+            .form-group label, .form-control { font-size: 1rem; }
+            .order-button { font-size: 1rem; padding: 12px; }
+            table, thead, tbody, th, td, tr { display: block; width: 100%; }
+            th, td { box-sizing: border-box; padding: 8px 4px; }
+            .journey-steps, .step { flex-direction: column; width: 100%; }
+            .button, .order-button { width: 100%; margin: 0.5rem 0; }
+            .footer { padding: 1.5rem 0; font-size: 0.95rem; }
+            .footer-disclaimer { font-size: 0.8rem; }
+            .form-group { margin-bottom: 1rem; }
+            .form-group input, .form-group select, .form-group textarea { font-size: 1rem; }
+            .form-group label { margin-bottom: 0.3rem; }
+            .form-group img { height: 32px !important; }
+            .form-group > div[style*='flex'] { flex-direction: column !important; gap: 0.5rem !important; }
+        }
+        @media (max-width: 400px) {
+            h1 { font-size: 1.05rem; }
+            h2 { font-size: 0.95rem; }
+            .order-form { padding: 0.5rem; }
+            .button, .order-button { font-size: 0.95rem; padding: 10px; }
+        }
     </style>
 </head>
 <body>
     <header class="hero">
-        <div class="container" style="display: flex; align-items: center; justify-content: center; position: relative;">
-            <img src="latestlogo.png" alt="Logo left" class="navbar-logo" style="height: 300px; width: auto; margin-right: 24px;">
-            <h1 style="text-align: center; margin: 0 24px; flex-shrink: 0;">5-Day Mommy Weight Loss Detox</h1>
-            <img src="latestlogo.png" alt="Logo right" class="navbar-logo" style="height: 300px; width: auto; margin-left: 24px;">
+        <div class="container" style="display: flex; align-items: center; justify-content: center; position: relative; flex-wrap: wrap;">
+            <img src="latestlogo.png" alt="Logo left" class="navbar-logo" style="height: 150px; width: auto; margin: 12px;">
+            <h1 style="text-align: center; margin: 12px; flex-shrink: 0; font-size: 1.8rem;">5-Day Mommy Weight Loss Detox</h1>
+            <img src="latestlogo.png" alt="Logo right" class="navbar-logo" style="height: 150px; width: auto; margin: 12px;">
         </div>
     </header>
     <header class="hero">
@@ -391,10 +421,9 @@
             <h2>What's Inside the 5-Day Mommy Detox Bundle?</h2>
             <img src="mommydetoxbundle.jpg" alt="5-Day Mommy Detox bundle" style="margin: 2rem auto;">
             <ul class="product-features">
-                <li><strong>1L Aloe Vera Juice</strong>: Gently flushes toxins and soothes digestion</li>
-                <li><strong>5 Sachets Plant Protein Shake</strong>: Nourishing, filling, and supports lean muscle</li>
-                <li><strong>5 Detox Herbal Tea Bags</strong>: Boosts metabolism and reduces bloating</li>
-                <li><strong>5 Fiber Sachets</strong>: Keeps you full and supports gut health</li>
+                <li><strong>2 x 1L Aloe Vera Gel</strong>: Gently flushes toxins and soothes digestion</li>
+                <li><strong>25g of Forever Lite Ultra Protein Shake (Vanilla or Chocolate)</strong>: Nourishing, filling, and supports lean muscle</li>
+                <li><strong>100 tablets of Forever Bee Pollen</strong>: Natural energy booster and immune system support</li>
                 <li><strong>Detox Guide & Meal Plan</strong>: Simple, family-friendly recipes and daily instructions</li>
             </ul>
             <p><strong>Bundle Price:</strong> <span style="color: var(--secondary-color); font-weight: bold;">₦19,500</span> (includes free delivery!)</p>
@@ -405,51 +434,118 @@
     
     <section class="section">
         <div class="container">
-            <h2>Your 5-Day Detox Schedule</h2>
+            <h2>5-Day Mommy Detox Plan</h2>
+            <p class="product-list">Using: 2 × 1 L Forever Aloe Vera Gel • 1 Pack Forever Lite Ultra • 1 Container Forever Bee Pollen</p>
+            
             <div style="overflow-x:auto;">
                 <table style="width:100%; border-collapse: collapse; margin: 2rem 0;">
                     <thead style="background: var(--light-bg);">
                         <tr>
                             <th style="padding: 10px; border: 1px solid #eee;">Day</th>
+                            <th style="padding: 10px; border: 1px solid #eee;">Phase</th>
                             <th style="padding: 10px; border: 1px solid #eee;">Morning</th>
-                            <th style="padding: 10px; border: 1px solid #eee;">Afternoon</th>
+                            <th style="padding: 10px; border: 1px solid #eee;">Midday (12 PM)</th>
                             <th style="padding: 10px; border: 1px solid #eee;">Evening</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td style="padding: 10px; border: 1px solid #eee;">1</td>
-                            <td style="padding: 10px; border: 1px solid #eee;">Aloe Vera Juice + Detox Tea</td>
-                            <td style="padding: 10px; border: 1px solid #eee;">Protein Shake + Fiber</td>
-                            <td style="padding: 10px; border: 1px solid #eee;">Light Dinner (from meal plan)</td>
+                            <td style="padding: 10px; border: 1px solid #eee;">Cleansing</td>
+                            <td style="padding: 10px; border: 1px solid #eee;">250 ml Forever Aloe Vera Gel + water + ¼ tablet (~125 mg) Forever Bee Pollen*</td>
+                            <td style="padding: 10px; border: 1px solid #eee;">Forever Lite Ultra Shake (vanilla or chocolate)</td>
+                            <td style="padding: 10px; border: 1px solid #eee;">250 ml Forever Aloe Vera Gel + water</td>
                         </tr>
                         <tr>
                             <td style="padding: 10px; border: 1px solid #eee;">2</td>
-                            <td style="padding: 10px; border: 1px solid #eee;">Aloe Vera Juice + Detox Tea</td>
-                            <td style="padding: 10px; border: 1px solid #eee;">Protein Shake + Fiber</td>
-                            <td style="padding: 10px; border: 1px solid #eee;">Light Dinner (from meal plan)</td>
+                            <td style="padding: 10px; border: 1px solid #eee;">Cleansing</td>
+                            <td style="padding: 10px; border: 1px solid #eee;">250 ml Forever Aloe Vera Gel + water + ½ tablet (~250 mg) Forever Bee Pollen*</td>
+                            <td style="padding: 10px; border: 1px solid #eee;">Forever Lite Ultra Shake (vanilla or chocolate)</td>
+                            <td style="padding: 10px; border: 1px solid #eee;">250 ml Forever Aloe Vera Gel + water</td>
                         </tr>
                         <tr>
                             <td style="padding: 10px; border: 1px solid #eee;">3</td>
-                            <td style="padding: 10px; border: 1px solid #eee;">Aloe Vera Juice + Detox Tea</td>
-                            <td style="padding: 10px; border: 1px solid #eee;">Protein Shake + Fiber</td>
-                            <td style="padding: 10px; border: 1px solid #eee;">Light Dinner (from meal plan)</td>
+                            <td style="padding: 10px; border: 1px solid #eee;">Replenish & Energize</td>
+                            <td style="padding: 10px; border: 1px solid #eee;">125 ml Forever Aloe Vera Gel + water + 1 tablet (500mg) Forever Bee Pollen (post-workout)*</td>
+                            <td style="padding: 10px; border: 1px solid #eee;">Forever Lite Ultra Shake (vanilla or chocolate)</td>
+                            <td style="padding: 10px; border: 1px solid #eee;">125 ml Forever Aloe Vera Gel + water</td>
                         </tr>
                         <tr>
                             <td style="padding: 10px; border: 1px solid #eee;">4</td>
-                            <td style="padding: 10px; border: 1px solid #eee;">Aloe Vera Juice + Detox Tea</td>
-                            <td style="padding: 10px; border: 1px solid #eee;">Protein Shake + Fiber</td>
-                            <td style="padding: 10px; border: 1px solid #eee;">Light Dinner (from meal plan)</td>
+                            <td style="padding: 10px; border: 1px solid #eee;">Replenish & Energize</td>
+                            <td style="padding: 10px; border: 1px solid #eee;">125 ml Forever Aloe Vera Gel + water + 2 tablets (split morning and afternoon Forever Bee Pollen*</td>
+                            <td style="padding: 10px; border: 1px solid #eee;">Forever Lite Ultra Shake (vanilla or chocolate)</td>
+                            <td style="padding: 10px; border: 1px solid #eee;">125 ml Forever Aloe Vera Gel + water</td>
                         </tr>
                         <tr>
                             <td style="padding: 10px; border: 1px solid #eee;">5</td>
-                            <td style="padding: 10px; border: 1px solid #eee;">Aloe Vera Juice + Detox Tea</td>
-                            <td style="padding: 10px; border: 1px solid #eee;">Protein Shake + Fiber</td>
-                            <td style="padding: 10px; border: 1px solid #eee;">Light Dinner (from meal plan)</td>
+                            <td style="padding: 10px; border: 1px solid #eee;">Replenish & Energize</td>
+                            <td style="padding: 10px; border: 1px solid #eee;">125 ml Forever Aloe Vera Gel + water + 2 tablets (split morning & afternoon) Forever Bee Pollen*</td>
+                            <td style="padding: 10px; border: 1px solid #eee;">Forever Lite Ultra Shake (vanilla or chocolate)</td>
+                            <td style="padding: 10px; border: 1px solid #eee;">125 ml Forever Aloe Vera Gel + water</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+
+            <div class="detox-instructions" style="margin-top: 2rem;">
+                <p><em>*Take your bee pollen immediately after your 15 min workout—once in the morning and once in the afternoon (for Days 1–2, your "afternoon" is at evening time).</em></p>
+                
+                <h3>How to Follow</h3>
+                <ul>
+                    <li><strong>Forever Aloe Vera Gel:</strong>
+                        <ul>
+                            <li>Days 1–2: 250 ml AM + 250 ml PM</li>
+                            <li>Days 3–5: 125 ml AM + 125 ml PM</li>
+                        </ul>
+                    </li>
+                    <li><strong>Forever Lite Ultra Shake:</strong> Blend one scoop with 200–250 ml water or low-fat milk at midday.</li>
+                    <li><strong>Forever Bee Pollen:</strong>
+                        <ul>
+                            <li>Day 1: ¼ tablet after morning & after afternoon workout</li>
+                            <li>Day 2: ½ tablet after morning & after afternoon workout</li>
+                            <li>Day 3: 1 tsp after morning workout</li>
+                            <li>Days 4–5: 2 tablets daily (post-morning workout; split AM & PM)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Post-Detox Maintenance Routine</h3>
+                <table style="width:100%; border-collapse: collapse; margin: 1rem 0;">
+                    <tr>
+                        <th style="padding: 10px; border: 1px solid #eee; text-align: left;">Time</th>
+                        <th style="padding: 10px; border: 1px solid #eee; text-align: left;">Product</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #eee;">Morning</td>
+                        <td style="padding: 10px; border: 1px solid #eee;">125–250 ml Forever Aloe Vera Gel + water</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #eee;">Mid-Morning</td>
+                        <td style="padding: 10px; border: 1px solid #eee;">2 tablets Forever Bee Pollen (one post-workout AM, one PM)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #eee;">Lunch</td>
+                        <td style="padding: 10px; border: 1px solid #eee;">Forever Lite Ultra Shake (vanilla)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #eee;">Afternoon</td>
+                        <td style="padding: 10px; border: 1px solid #eee;">Aloe Blossom Herbal Tea or green tea, or fresh fruit snack</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #eee;">Evening</td>
+                        <td style="padding: 10px; border: 1px solid #eee;">125–250 ml Forever Aloe Vera Gel + water</td>
+                    </tr>
+                </table>
+
+                <h3>Lifestyle Tips</h3>
+                <ul>
+                    <li>Follow your Free Detox Diet Plan—focus on lean protein, whole grains, and plenty of vegetables.</li>
+                    <li>Complete your Free 15–20 min daily Workout—mix light cardio, strength, and stretching.</li>
+                    <li>Stay hydrated with 8–10 glasses of water (in addition to your aloe gel servings).</li>
+                    <li>Aim for 7–8 hours of quality sleep nightly to support hormone balance and recovery.</li>
+                </ul>
+
         </div>
     </section>
     
@@ -473,6 +569,23 @@
             <p class="text-center">Order your 5-Day Mommy Detox bundle now and start your transformation!</p>
             <form id="orderForm" class="order-form" action="https://formspree.io/f/mpwpywvz" method="POST">
                 <h3>Complete the form below to get started:</h3>
+                <div class="form-group">
+                    <label class="required" style="margin-bottom: 0.5rem; display: block;">Select Product</label>
+                    <div style="margin-bottom: 1rem; display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center;">
+                        <label style="display: flex; align-items: center; gap: 8px;">
+                            <input type="radio" name="product" value="Forever Aloe Vera Gel Drink" required>
+                            <img src="aloevera.jpg" alt="Forever Aloe Vera Gel Drink" style="height: 40px; width: auto; border-radius: 4px;"> Forever Aloe Vera Gel Drink
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 8px;">
+                            <input type="radio" name="product" value="Forever Lite Ultra (Vanilla Protein Shake)">
+                            <img src="foreverliteultra.jpg" alt="Forever Lite Ultra Vanilla Protein Shake" style="height: 40px; width: auto; border-radius: 4px;"> Forever Lite Ultra (Vanilla Protein Shake)
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 8px;">
+                            <input type="radio" name="product" value="Forever Bee Pollen">
+                            <img src="foreverbeepollen.jpg" alt="Forever Bee Pollen" style="height: 40px; width: auto; border-radius: 4px;"> Forever Bee Pollen
+                        </label>
+                    </div>
+                </div>
                 <div class="form-group">
                     <label for="name" class="required">Name</label>
                     <input type="text" id="name" name="name" class="form-control" required>
@@ -510,16 +623,15 @@
         // Form handling
         document.getElementById('orderForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
             // In a real implementation, you would send this data to your server
             // For GitHub Pages, you might use a form service like Formspree
             // Here's an example of how you might collect the form data:
-            
             const formData = {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
                 phone: document.getElementById('phone').value,
                 address1: document.getElementById('address1').value,
+                product: document.querySelector('input[name="product"]:checked')?.value || '',
                 // address2: document.getElementById('address2').value,
                 // city: document.getElementById('city').value,
                 // state: document.getElementById('state').value,
@@ -527,7 +639,6 @@
                 // country: document.getElementById('country').value,
                 // instructions: document.getElementById('instructions').value
             };
-            
             // For GitHub Pages, you might use a form service like Formspree
             // Here's an example of how you might send the form data:
             fetch('https://formspree.io/f/mpwpywvz', {
@@ -541,12 +652,27 @@
             .then(data => {
                 console.log('Form submission successful:', data);
                 // Optionally, you might want to redirect the user or show a success message
+                window.location.href = 'success.html';
             })
             .catch(error => {
                 console.error('Form submission error:', error);
                 // Optionally, you might want to show an error message to the user
             });
         });
+
+        // Preselect product if product query param is present
+        (function() {
+            const params = new URLSearchParams(window.location.search);
+            const product = params.get('product');
+            if (product) {
+                const radios = document.querySelectorAll('input[name="product"]');
+                radios.forEach(radio => {
+                    if (radio.value === product) {
+                        radio.checked = true;
+                    }
+                });
+            }
+        })();
     </script>
 </body>
 </html>
