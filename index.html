@@ -570,18 +570,18 @@
             <form id="orderForm" class="order-form" action="https://formspree.io/f/mpwpywvz" method="POST">
                 <h3>Complete the form below to get started:</h3>
                 <div class="form-group">
-                    <label class="required" style="margin-bottom: 0.5rem; display: block;">Select Product</label>
+                    <label class="required" style="margin-bottom: 0.5rem; display: block;">Select Product(s)</label>
                     <div style="margin-bottom: 1rem; display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center;">
                         <label style="display: flex; align-items: center; gap: 8px;">
-                            <input type="radio" name="product" value="Forever Aloe Vera Gel Drink" required>
+                            <input type="checkbox" name="product" value="Forever Aloe Vera Gel Drink">
                             <img src="aloevera.jpg" alt="Forever Aloe Vera Gel Drink" style="height: 40px; width: auto; border-radius: 4px;"> Forever Aloe Vera Gel Drink
                         </label>
                         <label style="display: flex; align-items: center; gap: 8px;">
-                            <input type="radio" name="product" value="Forever Lite Ultra (Vanilla Protein Shake)">
+                            <input type="checkbox" name="product" value="Forever Lite Ultra (Vanilla Protein Shake)">
                             <img src="foreverliteultra.jpg" alt="Forever Lite Ultra Vanilla Protein Shake" style="height: 40px; width: auto; border-radius: 4px;"> Forever Lite Ultra (Vanilla Protein Shake)
                         </label>
                         <label style="display: flex; align-items: center; gap: 8px;">
-                            <input type="radio" name="product" value="Forever Bee Pollen">
+                            <input type="checkbox" name="product" value="Forever Bee Pollen">
                             <img src="foreverbeepollen.jpg" alt="Forever Bee Pollen" style="height: 40px; width: auto; border-radius: 4px;"> Forever Bee Pollen
                         </label>
                     </div>
@@ -631,7 +631,7 @@
                 email: document.getElementById('email').value,
                 phone: document.getElementById('phone').value,
                 address1: document.getElementById('address1').value,
-                product: document.querySelector('input[name="product"]:checked')?.value || '',
+                product: document.querySelectorAll('input[name="product"]:checked').map(input => input.value).join(','),
                 // address2: document.getElementById('address2').value,
                 // city: document.getElementById('city').value,
                 // state: document.getElementById('state').value,
@@ -665,10 +665,10 @@
             const params = new URLSearchParams(window.location.search);
             const product = params.get('product');
             if (product) {
-                const radios = document.querySelectorAll('input[name="product"]');
-                radios.forEach(radio => {
-                    if (radio.value === product) {
-                        radio.checked = true;
+                const checkboxes = document.querySelectorAll('input[name="product"]');
+                checkboxes.forEach(checkbox => {
+                    if (checkbox.value === product) {
+                        checkbox.checked = true;
                     }
                 });
             }
